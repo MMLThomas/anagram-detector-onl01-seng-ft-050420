@@ -5,7 +5,7 @@ class Anagram
   def initialize(word)
     @word = word
   
-    array.match do |words|
+    array.each do |words|
       if words.length == word.length 
         i = 0
         while i < words.length
