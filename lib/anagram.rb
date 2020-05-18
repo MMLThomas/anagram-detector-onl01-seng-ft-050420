@@ -1,24 +1,21 @@
 # Your code goes here!
-class Anagram
-  attr_accessor :word  
-  
+class Anagram 
+  attr_accessor :word 
+
   def initialize(word)
-    @word = word
-  
-    %w(array).each do |words|
-      if words.length == word.length 
-        i = 0
-        while i < words.length
-          letter = words[i]
-          if words.count(letter) != @word.count(letter)
-            return false
-          end
-        end
-      else
-        return false
+    self.word = word 
+  end
+
+  def match(words)
+    matches = []
+    words.each do |word|
+      original_word = self.word.split("").sort! 
+      comparison = word.split("").sort! 
+      if original_word == comparison
+        matches << word 
       end
     end
-    end
-
-  
+    matches
+  end 
+end 
 end
