@@ -18,7 +18,7 @@ class Anagram
         return false
       end
     end
-  
-  
+    end
+
   
 end
