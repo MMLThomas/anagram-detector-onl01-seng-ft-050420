@@ -1,9 +1,25 @@
 # Your code goes here!
 class Anagram
-  attr_accessor :anagram  
+  attr_accessor :word  
   
   def initialize(word)
-    @anagram = word
+    @word = word
+  end
+  
+  do |words|
+    if words.length == word.length 
+      i = 0
+      while i < words.length
+        letter = words[i]
+        if words.count(letter) != @word.count(letter)
+          return false
+        end
+      end
+    end
+    else
+      return false
+  end
+  
   
   
 end
