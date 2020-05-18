@@ -14,9 +14,9 @@ class Anagram
             return false
           end
         end
-      end
       else
         return false
+      end
     end
   
   
