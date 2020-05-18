@@ -4,21 +4,20 @@ class Anagram
   
   def initialize(word)
     @word = word
-  end
   
-  do |words|
-    if words.length == word.length 
-      i = 0
-      while i < words.length
-        letter = words[i]
-        if words.count(letter) != @word.count(letter)
-          return false
+    array.match do |words|
+      if words.length == word.length 
+        i = 0
+        while i < words.length
+          letter = words[i]
+          if words.count(letter) != @word.count(letter)
+            return false
+          end
         end
       end
+      else
+        return false
     end
-    else
-      return false
-  end
   
   
   
