@@ -10,9 +10,9 @@ class Anagram
     matches = []
     words.each do |word|
       original_word = @word.split("").sort! 
-      comparison = word.split("").sort! 
+      comparison = @word.split("").sort! 
       if original_word == comparison
-        matches << word 
+        matches << @word 
       end
     end
     matches
